@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: defualt
+  name: default
 
 stages:
 - stage: Build
