@@ -1,0 +1,19 @@
+trigger:
+- main
+
+pool:
+  name: defualt
+
+stages:
+- stage: Build
+  displayName: Build and Push Image
+  jobs:
+  - job: Build
+    displayName: Build Job
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'acr-pipeline-sc'
+        repository: 'app1/nginxacr1'
+        command: 'buildAndPush'
+        Dockerfile: '$(Build.SourceWorkingDirectory)/Dockerfile'
