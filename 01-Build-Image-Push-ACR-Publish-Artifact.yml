@@ -16,4 +16,4 @@ stages:
         containerRegistry: 'acr-pipeline-sc'
         repository: 'app1/nginxacr1'
         command: 'buildAndPush'
-        Dockerfile: '$(Build.SourceWorkingDirectory)/Dockerfile'
+        Dockerfile: '$(Build.SourceDirectory)/Dockerfile'
